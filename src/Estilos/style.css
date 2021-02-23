@@ -1,0 +1,88 @@
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+/* .body{
+    font-family:Poppins;
+} */
+
+.card{
+    background-color: var(--Very-Light-Gray);
+    margin: 0 2rem 1rem;
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    position: relative;
+    font-family: Poppins;
+    min-height: 200px;
+    padding: 1rem;
+}
+
+.card:first-child::after{
+    --icon:url(../assets/icon-supervisor.svg);
+}
+.card:nth-child(2)::after{
+    --icon:url(../assets/icon-team-builder.svg);
+}
+.card:nth-child(3)::after{
+    --icon:url(../assets/icon-karma.svg);
+}
+.card:nth-child(4)::after{
+    --icon:url(../assets/icon-calculator.svg);
+}
+.card:first-child::before{
+    --color: var(--Cyan);
+}
+.card:nth-child(2)::before{
+    --color: var(--Red);
+}
+.card:nth-child(3)::before{
+    --color: var(--Orange);
+}
+.card:nth-child(4)::before{
+    --color: var(--Blue);
+}
+.card::before{
+    content:'';
+    background-color: var(--color);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -5px;
+    z-index: -10;
+    left:0;
+    border-radius: 5px;
+}
+.card::after{
+    content: var(--icon) ;
+    position: absolute;
+    right: 1rem;
+}
+.card .title{
+    margin-top: 0;
+    color:var(--Very-Dark-Blue);
+}
+.card .text{
+    color: var(--Grayish-Blue);
+}
+
+.encabezado{
+    text-align: center;
+    margin: 0 2rem 2rem;
+}
+.encabezado  > .text{
+    font-size: 20px;
+    color: var(--Grayish-Blue);
+}
+h1{
+    color:var(--Very-Dark-Blue);
+}
+body{
+    background-color: var(--Very-Light-Gray);
+}
