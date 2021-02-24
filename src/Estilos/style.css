@@ -86,3 +86,39 @@ h1{
 body{
     background-color: var(--Very-Light-Gray);
 }
+.cards{
+    display: grid;
+}
+@media screen and (min-width:768px){
+    .cards{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-gap:30px;
+        grid-auto-flow: column;
+    }
+}
+
+@media screen and (min-width:768px){
+    .card:first-child,.card:last-child{
+        top: 50%;
+    }
+    .card:nth-child(2){
+        grid-column:2/3;
+        grid-row:1/2;
+    }
+    .card:nth-child(3){
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .card:last-child{
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+}
+
+@media screen and (min-width:768px){
+    body{
+        max-height: 100vh;
+        padding: 1rem 3rem;
+    }
+}

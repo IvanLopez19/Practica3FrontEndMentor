@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Encabezado/>
-      <div>
+      <div className="cards">
       <Card title='Supervisor' text='Ventors activity to identify project roadblocks'/>
       <Card title='Team Builder' text='Scans our talent network to create the optimal team for your project'/>
       <Card title='Karma' text='Regularly evaluetes our talent to ensure quality'/>
